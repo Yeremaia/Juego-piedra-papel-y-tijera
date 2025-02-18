@@ -1,0 +1,449 @@
+@import "reset.css";
+
+@font-face {
+    font-family: Roboto;
+    src: url('fonts/RobotoSlab-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: Sixtyfour;
+    src: url('fonts/SixtyfourConvergence-Regular-VariableFont_BLED,SCAN,XELA,YELA.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    font-family: 'Roboto';
+}
+
+/* ============ INDEX ============= */
+.main-index {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 631.4px;
+}
+
+/* =========== Derecha Index ============ */
+.derecha-index {
+    width: 100%;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.derecha-index h1 {
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    font-weight: bold;
+    border-top: 2px solid black;
+    width: 70%;
+}
+
+.bordes-index {
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    padding: 50px 100px 0 100px;
+    height: 400px;
+    width: 84%;
+}
+
+/* ======= Formulario index =========== */
+.formulario-index {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.formulario-index input {
+    margin: 20px 0;
+    height: 45px;
+    font-size: 20px;
+    border-radius: 2%;
+    border: none;
+    background-color: #DED0AA;
+    color: #1f1b1b;
+    padding: 15px;
+    font-family: 'Roboto';
+}
+
+#usuario {
+    margin-top: 0;
+}
+
+#pwd {
+    margin-bottom: 5px;
+}
+
+.formulario-index p {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.formulario-index p a {
+    margin-left: 4px;
+    color: blue;
+    text-decoration: none;
+}
+
+.formulario-index p a:hover {
+    color: black;
+}
+
+.boton-index {
+    display: flex;
+    margin-top: 50px;
+    height: 20%;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.boton-index input {
+    height: 50px;
+    width: 200px;
+    border-radius: 10%;
+    font-size: 17px;
+    border: none;
+    box-shadow: 2px 2px 2px black;
+    background-color: #E8D188;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-index input:hover {
+    border: 2px black solic;
+    background-color: #91845a;
+    color: white;
+}
+
+/* ======== Enlaces relacionados =========== */
+.iniciar-con {
+    display: flex;
+    border-top: 2px solid black;
+    padding-top: 20px;
+    width: 70%;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.iniciar-con li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.iniciar-con li a img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+/* ========= Izquierda Index =========== */
+aside img {
+    height: 100%;
+    width: 600px;
+    border-right: 5px solid #ccc;
+}
+
+
+aside {
+    height: 100%;
+    width: 50%;
+}
+
+/* ========= Crear Cuenta =========== */
+.fondo-crear-cuenta {
+    background-image: url('../img/fondos/fondo-login.jpg');
+    font-family: 'Roboto';
+}
+
+.contenedor-crear-cuenta {
+    margin-left: 300px;
+    margin-top: 20px;
+    width: 51%;
+    height: 595px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10%;
+}
+
+.border-crear h1 {
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.form-crear {
+    height: 466px;
+    max-height: 477px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 700px;
+    padding: 0 100px;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.form-crear img {
+    height: 40px;
+    width: 40px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.form-crear img:hover {
+    border: 2px solid rgb(129, 129, 129);
+}
+
+.contenedor-crear-cuenta h1 {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    font-weight: bold;
+    border-top: 2px solid black;
+    width: 50%;
+}
+
+.form-crear label {
+    font-weight: bold;
+    margin: 40px 0 14px 0;
+}
+
+.form-crear input {
+    height: 45px;
+    font-size: 16px;
+    border-radius: 2%;
+    border: none;
+    background-color: #DED0AA;
+    color: #1f1b1b;
+    padding: 10px 0 10px 20px;
+    font-family: 'Roboto';
+}
+
+.boton-formulario {
+    margin-top: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.boton-formulario input {
+    height: 40px;
+    width: 200px;
+    border-radius: 10%;
+    font-size: 17px;
+    border: none;
+    box-shadow: 2px 2px 2px black;
+    background-color: #E8D188;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-formulario input:hover {
+    border: 2px black solic;
+    background-color: #91845a;
+    color: white;
+}
+
+/* ============ Pagina de Juego ============== */
+.contenedor-juego {
+    background: linear-gradient(180deg, rgb(136, 2, 2), rgb(0, 0, 160));
+    background-size: 400% 400%;
+    animation: gradiente 9s ease-in infinite;
+}
+
+@keyframes gradiente {
+    0% {
+        background-position: 50% 0%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 50% 0%;
+    }
+}
+
+/* ------------- header juego ----------- */
+.contenedor-header {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.contenedor-header p {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Sixtyfour';
+    color: black;
+}
+
+.blanco-fuera {
+    width: 80%;
+    background-color: white;
+    margin-left: 130px;
+}
+
+/* ----------- botones juego --------------- */
+.botones {
+    background-color: #EFC56B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.botones-juego button img {
+    height: 60px;
+    width: 100px;
+}
+
+.botones-juego button {
+    border-radius: 10%;
+    margin: 0 30px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.botones-juego button:hover {
+    background-color: black;
+    border: 2px solid white;
+}
+
+.botones img {
+    height: 70px;
+}
+
+#regresar {
+    border-right: 2px solid black;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+#reiniciar {
+    border-left: 2px solid black;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+#regresar:hover, #reiniciar:hover {
+    background-color: white;
+}
+
+/* ------------ Mesa de juego --------------- */
+.brazos {
+    background-color: #161521;
+    display: flex;
+    margin: 50px 30px;
+    height: 300px;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+
+@keyframes moverBrazos {
+    0% {
+        transform: rotate(140deg);
+    }
+    50% {
+        transform: rotate(0deg); /* Posición de juego */
+    }
+    100% {
+        transform: rotate(140deg); /* Vuelve a la posición original */
+    }
+}
+
+.mover {
+    animation: moverBrazos 3s ease-in-out;
+}
+
+.brazo-azul img, .brazo-rojo img {
+    height: 140px;
+    width: 340px;
+}
+
+.brazo-azul, .brazo-rojo {
+    display: block;
+    animation: 1.5s;
+}
+
+#piedra-izquierdo {
+    position: absolute;
+    left: 420px;
+    height: 200px;
+    width: 190px;
+    top: 230px;
+}
+
+#piedra-derecho {
+    position: absolute;
+    right: 430px;
+    height: 180px;
+    width: 200px;
+    top: 230px;
+}
+
+table {
+    background-color: #EFC56B;
+    width: 100%;
+}
+
+table tr th, table tr td {
+    border: 4px solid black;
+    padding: 20px 20px;
+}
+
+table tr th {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#nombre-pc {
+    text-shadow: 2px 2px 2px blue;
+}
+
+#nombre-usuario {
+    text-shadow: 2px 2px 2px red;
+}
+
+table tr td {
+    padding: 20px 20px;
+}
+
+.pantallita {
+    margin: 0 30px 20px 30px;
+    background-color: #161521;
+    display: flex;
+    justify-content: center;
+}
+
+#cuadro {
+    font-weight: bold;
+    font-size: 23px;
+    background-color: white;
+    width: auto;
+    padding: 5px 30px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30% 30% 0 0;
+}
+
+footer {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+}
