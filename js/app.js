@@ -1,4 +1,4 @@
-// 🔙 Función para regresar al inicio
+// Función para regresar al inicio
 function Retroceder() {
     window.location.href = 'index.html';
 }
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const pwd = document.getElementById('pwd').value.trim();
 
             if (!nombre || !usuario || !pwd) {
-                alert("⚠️ Todos los campos son obligatorios.");
+                alert("Todos los campos son obligatorios.");
                 return;
             }
 
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Verificar si el usuario ya existe
             const usuarioExiste = usuarios.some(u => u.usuario === usuario);
             if (usuarioExiste) {
-                alert("🚫 Este usuario ya está registrado. Intenta con otro nombre de usuario.");
+                alert("Este usuario ya está registrado. Intenta con otro nombre de usuario.");
                 return;
             }
 
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Guardar en localStorage
             localStorage.setItem("usuariosRegistrados", JSON.stringify(usuarios));
 
-            alert("✅ Cuenta creada con éxito. Ahora puedes iniciar sesión.");
+            alert("Cuenta creada con éxito. Ahora puedes iniciar sesión.");
             window.location.href = 'index.html';
         });
     }
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let usuarios = JSON.parse(localStorage.getItem("usuariosRegistrados")) || [];
 
             if (usuarios.length === 0) {
-                alert("⚠️ No hay cuentas registradas.");
+                alert("No hay cuentas registradas.");
                 return;
             }
 
@@ -62,10 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Guardar usuario en localStorage
                 localStorage.setItem("usuarioActual", JSON.stringify(usuarioEncontrado));
 
-                alert(`🎉 ¡Bienvenido ${usuarioEncontrado.nombre}!`);
+                alert(`¡Bienvenido ${usuarioEncontrado.nombre}!`);
                 window.location.href = 'juego.html'; // Redirigir al juego
             } else {
-                alert("🚫 Usuario o contraseña incorrectos.");
+                alert("Usuario o contraseña incorrectos.");
             }
         });
     }
@@ -107,7 +107,7 @@ function numeroAleatorioPC() {
 let puntosJugador = 0;
 let puntosPC = 0;
 
-// 🔄 Función para recargar la página
+// Función para recargar la página
 function reiniciar() {
     let resultado = document.getElementById("cuadro");
     puntosJugador = 0;
@@ -116,15 +116,15 @@ function reiniciar() {
     coloresCasilla(); // Para resetear colores
 }
 
-// 🔄 Función para cambiar imagen y determinar el resultado
+// Función para cambiar imagen y determinar el resultado
 function jugar(eleccionJugador) {
     let imagenes = {
-        1: "img/piedra.png",
-        2: "img/papel.png",
-        3: "img/tijera.png",
-        4: "img/piedra-izquierdo.png",
-        5: "img/papel-izquierdo.png",
-        6: "img/tijera-izquierda.png"
+        1: "img/piedra-rojo.png",
+        2: "img/papel-rojo.png",
+        3: "img/tijera-rojo.png",
+        4: "img/piedra-azul.png",
+        5: "img/papel-azul.png",
+        6: "img/tijera-azul.png"
     };
 
     let resultado = document.getElementById("cuadro");
@@ -158,7 +158,7 @@ function jugar(eleccionJugador) {
 }
 
 
-// 🔄 Función para determinar el resultado después de 3 segundos
+// Función para determinar el resultado después de 3 segundos
 function mostrarResultado(opcionJugador, opcionPC) {
     let resultado = document.getElementById("cuadro");
 
@@ -171,19 +171,19 @@ function mostrarResultado(opcionJugador, opcionPC) {
         (opcionJugador === 2 && opcionPC === 1) || // Papel gana a Piedra
         (opcionJugador === 3 && opcionPC === 2)    // Tijera gana a Papel
     ) {
-        resultado.textContent = `${usuarioActual.nombre} Ganó`;
-        resultado.style.color = "red";
+        resultado.textContent = `Azul Ganó`;
+        resultado.style.color = "blue";
         if (puntosJugador < 5) puntosJugador++;
     } else {
-        resultado.textContent = `${generarNombreAleatorio()} Ganó`;
-        resultado.style.color = "blue"
+        resultado.textContent = `Rojo Ganó`;
+        resultado.style.color = "red"
         if (puntosPC < 5) puntosPC++;
     }
 
     coloresCasilla(); // Actualizar casillas después de cambiar puntos
 }
 
-// 🔄 Función para colorear las casillas
+// Función para colorear las casillas
 function coloresCasilla() {
     // Resetear colores
     for (let i = 1; i <= 5; i++) {
@@ -192,10 +192,10 @@ function coloresCasilla() {
     }
 
     for (let i = 1; i <= puntosPC; i++) {  
-        document.getElementById(`casilla-azul-${i}`).style.backgroundColor = "blue";
+        document.getElementById(`casilla-azul-${i}`).style.backgroundColor = "red";
     }
     for (let i = 1; i <= puntosJugador; i++) {
-        document.getElementById(`casilla-roja-${i}`).style.backgroundColor = "red";
+        document.getElementById(`casilla-roja-${i}`).style.backgroundColor = "blue";
     }
 }
 
